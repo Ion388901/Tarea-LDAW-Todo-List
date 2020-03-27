@@ -33,12 +33,14 @@
             <form action="/tasks/{{id}}/done" method="POST">
               <a href="javascript:;" onclick="parentNode.submit();" class="card-link">Done</a>
             </form>
-            <form method="POST" action="/tasks/{{ id }}?_method=DELETE">
-              <input type="submit" value="DELETE ?">
-            </form>
           {{/eq}}
         </div>
       </div>
+      @if ($status == 'done')
+        <form action="/tasks/{{id}}/delete" method="DELETE">
+          <a href="javascript:;" onclick="parentNode.delete();" class="card-link">Done</a>
+        </form>
+      @endif
       {{/each}}
     </div>
   </div>

@@ -8,6 +8,6 @@ router.post('/tasks', tasksController.store);
 
 router.post('/tasks/:id/done', tasksController.done);
 
-router.delete('/tasks/:id', tasksController.delete);
+router.delete('/tasks/:id/delete', tasksController.delete);
 
 module.exports = router;
